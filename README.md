@@ -91,6 +91,6 @@ Built with Java, Spring Boot, PostgreSQL, and Docker.
   "techStack": "java, spring, angular",
   "learningPathRecommendations": "Master Spring, Explore Microservices, Study System Design"
 }
----
+
 
 
