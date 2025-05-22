@@ -1,0 +1,5 @@
+ docker compose up -d
+ docker exec -it postgres-spring-boot psql -U vijayasarathism -d spring
+
+  \c spring
+

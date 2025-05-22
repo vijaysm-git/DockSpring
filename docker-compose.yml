@@ -1,0 +1,23 @@
+services:
+  db:
+    container_name: postgres-spring-boot
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: vijayasarathism
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: spring
+      PGDATA: /data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5332:5432"
+    networks:
+      - db_network
+    restart: unless-stopped
+
+networks:
+  db_network:
+    driver: bridge
+
+volumes:
+  db:
