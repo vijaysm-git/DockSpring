@@ -23,7 +23,7 @@ DockSpring is a backend-only project built for production-readiness. It leverage
 
 Explore the complete RESTful API via Postman:
 
-🔗 [Live API Documentation](https://documenter.getpostman.com/view/xxxxxx/backend-api)
+🔗 [Live API Documentation](https://documenter.getpostman.com/view/37432471/2sB2qah1fB)
 
 This includes:
 - Full CRUD for Software Engineers
@@ -46,13 +46,35 @@ Built with Java, Spring Boot, PostgreSQL, and Docker.
 
 ## 🧪 API Endpoints
 
-| Method | Endpoint        | Description              |
-|--------|------------------|--------------------------|
-| GET    | `/api/items`     | List all items           |
-| POST   | `/api/items`     | Add a new item           |
-| PUT    | `/api/items/{id}`| Update an item           |
-| DELETE | `/api/items/{id}`| Delete an item           |
+### GET `/`
+- **Description**: Health check endpoint. Verifies the server is running.
+- **Response**: `200 OK`
 
+---
+
+### GET `/api/v1/software-engineers`
+- **Description**: Fetch all software engineer profiles.
+- **Response**: List of all users with `id`, `name`, `techStack`, and `learningPathRecommendations`.
+
+---
+
+### GET `/api/v1/software-engineers/{id}`
+- **Description**: Fetch a software engineer by their unique `id`.
+- **Path Variable**: `id` (Integer) – ID of the software engineer.
+- **Response**: A single software engineer object.
+
+---
+
+### POST `/api/v1/software-engineers`
+- **Description**: Create a new software engineer profile.
+- **Headers**: `Content-Type: application/json`
+- **Request Body**:
+```json
+{
+  "name": "john",
+  "techStack": "java, spring, angular",
+  "learningPathRecommendations": "Master Spring, Explore Microservices, Study System Design"
+}
 ---
 
 ## 🐳 How to Run Locally (Docker)
