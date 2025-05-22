@@ -19,6 +19,20 @@ DockSpring is a backend-only project built for production-readiness. It leverage
 
 ---
 
+# 📘 API Documentation – Spring Boot SWE Tracker
+
+Explore the complete RESTful API via Postman:
+
+🔗 [Live API Documentation](https://documenter.getpostman.com/view/xxxxxx/backend-api)
+
+This includes:
+- Full CRUD for Software Engineers
+- JSON payload examples
+- Live test endpoints (when server is running locally)
+
+Built with Java, Spring Boot, PostgreSQL, and Docker.
+
+
 ## ⚙️ Features
 
 - ✅ Clean RESTful API structure
@@ -47,6 +61,8 @@ DockSpring is a backend-only project built for production-readiness. It leverage
    ```bash
    git clone https://github.com/vijaysm-git/dockspring.git
    cd dockspring
-
+2.Connect Postgres to Docker
    docker compose up -d
+   docker exec -it postgres-spring-boot psql -U username -d dbname
+   \c ->to connect to database
 
