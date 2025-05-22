@@ -18,6 +18,22 @@ DockSpring is a backend-only project built for production-readiness. It leverage
 | Deployment   | Docker Compose (Local)   |
 
 ---
+### 🐳 How to Run Locally (Docker)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vijaysm-git/dockspring.git
+   cd dockspring
+2.Connect Postgres to Docker
+  ```bash
+   docker compose up -d
+   docker exec -it postgres-spring-boot psql -U username -d dbname
+```
+3. connect to database
+   ```bash
+   \c
+   ```
+
 
 # 📘 API Documentation – Spring Boot SWE Tracker
 
@@ -77,14 +93,4 @@ Built with Java, Spring Boot, PostgreSQL, and Docker.
 }
 ---
 
-## 🐳 How to Run Locally (Docker)
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/vijaysm-git/dockspring.git
-   cd dockspring
-2.Connect Postgres to Docker
-   docker compose up -d
-   docker exec -it postgres-spring-boot psql -U username -d dbname
-   \c ->to connect to database
 
